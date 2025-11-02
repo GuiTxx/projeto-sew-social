@@ -1,36 +1,211 @@
-.hero{
-    width: 1888px;
+.hero {
+    max-width: 1888px;
     height: 1068px;
+    position: relative;
     background: url(/images/banners/hero.png) no-repeat center;
     background-size: cover;
     margin: 1.164375rem auto;
     border-radius: 15px;
 }
-.hero-overlay{
-    width: 100%;
+
+/* Alinhamento do conteúdo do lado esquerdo do BackGround */
+.hero-align {
+    display: flex;
+    width: 1119px;
     height: 100%;
-    justify-content: flex-end;
-    border-radius: 15px;
+    justify-content: space-between;
+
+}
+
+.hero-overlay {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 6.5625rem;
+    border-radius: 15px;
 }
-.hero-content h2{
-    width: 950px;
-    height: 256px;
-    margin-left: 88px;
-    margin-bottom: 470px;
+
+.hero-content h2 {
+    width: 59.375rem;
+    height: 16rem;
     color: #ffffff;
     font-family: var(--fonte-principal);
-    font-size: 128px;
+    font-size: 8rem;
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
     text-align: left;
-    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);   
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
 }
-/* .hero-buttons a{
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 3.625rem;
+    text-align: center;
+    margin-bottom: 9.3125rem;
+}
+
+.hero-buttons .btn-hero {
     width: 491px;
     height: 92px;
     font-size: 64px;
     font-weight: 400;
-} */
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+    border: 3px solid #000000;
+    border-radius: 15px;
+}
+
+/* Estiliza o botão um */
+.hero-buttons .btn-hero-one {
+    background-color: transparent;
+    color: var(--cor-terciaria);
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .btn-hero-one:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-shadow: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Estiliza o botão dois */
+.hero-buttons .btn-hero-two {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-shadow: 3px 1px 6.5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .btn-hero-two:hover {
+    color: var(--cor-principal);
+    text-shadow: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1920px) {
+    .hero {
+        margin: 1.164375rem 1rem;
+    }
+    .hero-content h2 {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 1890px) {
+    .hero {
+        background: url(/images/banners/hero-responsivo.png) no-repeat center;
+    }
+    .hero-align {
+        width: 100%;
+    }
+    .hero-overlay {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 12.5625rem;
+    }
+    .hero-buttons {
+        flex-direction: row;
+        gap: 4.5625rem;
+    }
+    .hero-content h2 {
+        font-size: 6.25rem;
+        width: 46.375rem;
+        height: 12rem;
+    }
+
+}
+
+@media (max-width: 1305px) {
+    .hero {
+        background: url(/images/banners/hero-mobile.png) no-repeat center;
+    }
+    .hero-align {
+        width: 100%;
+    }
+    .hero-overlay {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3.1625rem;
+    }
+    .hero-buttons {
+        position: relative;
+        flex-direction: column;
+        gap: 4.5625rem;
+        top: 3rem;
+    }
+    .hero-content h2 {
+        font-size: 5.375rem;
+        width: 39.875rem;
+        height: 10rem;
+    }
+
+}
+
+@media (max-width: 920px) {
+    .hero {
+        background: url(/images/banners/hero-mobile-menor.png) no-repeat center;
+    }
+    .hero-align {
+        width: 100%;
+    }
+    .hero-overlay {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3.9625rem;
+    }
+    .hero-buttons {
+        position: relative;
+        flex-direction: column;
+        gap: 4.5625rem;
+        top: 3rem;
+    }
+    .hero-content h2 {
+        font-size: 3.975rem;
+        width: 29.475rem;
+        height: 7.39rem;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    .hero {
+        background: url(/images/banners/hero-mobile-menor-2x.png) no-repeat center;
+    }
+    .hero-align {
+        width: 100%;
+    }
+    .hero-overlay {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3.9625rem;
+    }
+    .hero-buttons {
+        position: relative;
+        flex-direction: column;
+        gap: 5.8625rem;
+        top: 3rem;
+    }
+    .hero-buttons .btn-hero {
+        width: 391px;
+        height: 92px;
+        font-size: 38px;
+        text-align: center;
+        padding-top: 1.1rem;
+    }
+    .hero-content h2 {
+        font-size: 2.775rem;
+        width: 20.575rem;
+        height: 5.39rem;
+    }
+
+}
