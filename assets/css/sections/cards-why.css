@@ -9,10 +9,11 @@
 }
 
 /* Estilização do Título da Seção */
-.title{
+.title {
     text-align: center;
 }
-.title .back-text{
+
+.title .back-text {
     font-family: var(--fonte-secundaria);
     font-size: 11.25rem;
     font-weight: 400;
@@ -21,7 +22,8 @@
     opacity: 0.2;
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
 }
-.title .front-text{
+
+.title .front-text {
     position: absolute;
     font-family: var(--fonte-principal);
     font-size: 4rem;
@@ -34,8 +36,9 @@
     color: var(--cor-terciaria);
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
 }
+
 /* Container pai dos cards */
-.card-why{
+.card-why {
     display: flex;
     gap: 6.875rem;
     margin: 1rem auto;
@@ -44,7 +47,7 @@
 }
 
 /* Utilizado apenas para centralizar os cards */
-.card-align{
+.card-align {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,7 +55,7 @@
 }
 
 /* Representa cada card (cada div) */
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,50 +64,153 @@
     background-color: var(--cor-terciaria);
     border-radius: 15px;
     padding: 3rem 2.5rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 11px 9px 18px rgba(0, 0, 0, 0.57);
+}
+
+.card:hover {
+    border: 5px solid var(--cor-secundaria);
+    opacity: 0.98;
 }
 
 /* Tamanho dos Logos de cada Card */
-.card-why .infrastructure img{
+.card-why .infrastructure img {
     width: 117px;
     height: 140px;
 }
-.card-why .smart-class img{
+
+.card-why .smart-class img {
     width: 152px;
     height: 140px;
 }
-.card-why .professional img{
+
+.card-why .professional img {
     width: 137px;
     height: 140px;
 }
 
 /* Titulo de cada card */
-.card-why h2{
+.card-why h2 {
     font-family: var(--fonte-principal);
     font-size: 3.125rem;
     font-weight: 400;
     color: #F30404;
     text-transform: uppercase;
 }
+
 /* Título do Profissional que quebra a linha em dois */
-.card-why .pro{
+.card-why .pro {
     text-align: center;
     line-height: 1;
 }
 
 /* Paragrafo dentro do Card */
-.card-why .card p{
+.card-why .card p {
     font-size: 2.5rem;
     line-height: 1.15;
     text-align: justify;
+    margin: 0 1rem;
 }
 
 /* Alinhando o texto dos dois primeiros card com o do terceiro */
-.card-why .card .space{
+.card-why .card .space {
     margin-top: 1.5rem;
 }
 
 /* Destacando trechos do texto no card */
-.card-why .card span{
+.card-why .card span {
     font-weight: bold;
+}
+
+/* Responsivo seção cards */
+@media (max-width: 1800px) {
+    .card-align {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .card {
+        width: 85rem;
+        height: 38rem;
+    }
+
+    .card-why .card p {
+        font-size: 3rem;
+        margin: 0 2rem;
+    }
+
+    .card-why .professional .text-pro {
+        margin-top: 1.5rem;
+    }
+
+    .title .front-text {
+        width: 850px;
+        font-size: 3.8rem;
+    }
+
+
+}
+
+/* Responsivo desktop grande */
+@media (max-width: 1430px) {
+    .card {
+        width: 55rem;
+        height: 45rem;
+    }
+
+    .card-why .card p {
+        margin: 0 0.7rem;
+    }
+}
+
+/* Responsivo desktop menor */
+@media (max-width: 1170px) {
+    .title .back-text {
+        font-size: 9.25rem;
+    }
+
+    .title .front-text {
+        font-size: 3.2rem;
+        /* Top utilizado para colocar o  texto sob o back-text */
+        top: 73.125rem;
+    }
+}
+
+/* Responsivo tablet */
+@media (max-width: 960px) {
+    .card {
+        width: 30rem;
+        height: 43rem;
+    }
+
+    .title .back-text {
+        font-size: 7.25rem;
+    }
+
+    .title .front-text {
+        font-size: 2.6rem;
+        /* Top utilizado para colocar o  texto sob o back-text */
+        top: 72.125rem;
+    }
+
+    .card-why .card p {
+        font-size: 2rem;
+        margin: 0 0.8rem;
+    }
+
+    .card-why .professional .text-pro {
+        margin: 0 1rem;
+    }
+}
+
+/* Responsivo mobile tipo celular */
+@media (max-width: 735px) {
+    .title .back-text {
+        font-size: 5.25rem;
+    }
+
+    .title .front-text {
+        font-size: 1.8rem;
+        /* Top utilizado para colocar o  texto sob o back-text */
+        top: 71.525rem;
+    }
 }
