@@ -91,6 +91,7 @@
     transition: all 0.5s ease-in-out;
 }
 
+/* Responsivo desktop ultra wide */
 @media (max-width: 1920px) {
     .hero {
         margin: 1.164375rem 1rem;
@@ -100,6 +101,7 @@
     }
 }
 
+/* Responsivo desktop grande */
 @media (max-width: 1890px) {
     .hero {
         background: url(/images/banners/hero-responsivo.png) no-repeat center;
@@ -124,6 +126,7 @@
 
 }
 
+/* Responsivo desktop menor */
 @media (max-width: 1305px) {
     .hero {
         background: url(/images/banners/hero-mobile.png) no-repeat center;
@@ -150,6 +153,7 @@
 
 }
 
+/* Responsivo tablet */
 @media (max-width: 920px) {
     .hero {
         background: url(/images/banners/hero-mobile-menor.png) no-repeat center;
@@ -176,6 +180,7 @@
 
 }
 
+/* Responsivo mobile tipo celular */
 @media (max-width: 670px) {
 
     .hero {
