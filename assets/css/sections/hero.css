@@ -1,1 +1,36 @@
-/* hero.css — estilos do hero */
+.hero{
+    width: 1888px;
+    height: 1068px;
+    background: url(/images/banners/hero.png) no-repeat center;
+    background-size: cover;
+    margin: 1.164375rem auto;
+    border-radius: 15px;
+}
+.hero-overlay{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-content h2{
+    width: 950px;
+    height: 256px;
+    margin-left: 88px;
+    margin-bottom: 470px;
+    color: #ffffff;
+    font-family: var(--fonte-principal);
+    font-size: 128px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);   
+}
+/* .hero-buttons a{
+    width: 491px;
+    height: 92px;
+    font-size: 64px;
+    font-weight: 400;
+} */
