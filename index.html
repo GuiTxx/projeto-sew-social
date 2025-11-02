@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>SEW Everywhere</title>
     <!-- Exemplo de importação dos CSS locais -->
-     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/sections/header.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <h1 class="logo">
@@ -19,26 +24,35 @@
                 <img src="images/logo/logo-oficial.svg" alt="SEW Everywhere">
             </a>
         </h1>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li class="item-nav"><a href="#" title="Nossa história">história</a></li>
-                <li class="item-nav dropdown">
-                    <a href="#" title="Cursos">cursos</a>
-                    <img src="images/icons/header/dropdown.svg" alt="Seta para baixo">
-                </li>
-                <li class="item-nav dropdown">
-                    <a href="#" title="Como Ajudar">como ajudar</a>
-                    <img src="images/icons/header/dropdown.svg" alt="Seta para baixo">
-                </li>
-                <li class="item-nav"><a href="#" title="Plataforma">plataforma</a></li>
-            </ul>
+
+        <input type="checkbox" class="check-box" id="check-box">
+        <label for="check-box" class="menu-icon">
+            <i id="burguer" class="material-symbols-outlined">menu</i>
+        </label>
+        <nav class="nav-container">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="item-nav"><a href="#" title="Nossa história">história</a></li>
+                    <li class="item-nav dropdown">
+                        <a href="#" title="Cursos">cursos</a>
+                        <img src="images/icons/header/dropdown.svg" alt="Seta para baixo">
+                    </li>
+                    <li class="item-nav dropdown">
+                        <a href="#" title="Como Ajudar">como ajudar</a>
+                        <img src="images/icons/header/dropdown.svg" alt="Seta para baixo">
+                    </li>
+                    <li class="item-nav"><a href="#" title="Plataforma">plataforma</a></li>
+                </ul>
+                <div class="login">
+                    <a href="#" class="btn-login" title="Entrar na sua conta">
+                        <i id="user" class="material-symbols-outlined">account_circle</i>
+                    </a>
+                </div>
+            </nav>
         </nav>
-        <div class="login">
-            <a href="#" class="btn-login" title="Entrar na sua conta">
-                <img src="images/icons/header/user.svg" alt="Ícone de usuário">
-            </a>
-        </div>
+
     </header>
 
 </body>
+
 </html>
