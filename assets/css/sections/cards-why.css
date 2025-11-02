@@ -1,0 +1,110 @@
+/* cards.css — estilos dos cards */
+.why-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1888px;
+    margin: 1.164375rem auto;
+}
+
+/* Estilização do Título da Seção */
+.title{
+    text-align: center;
+}
+.title .back-text{
+    font-family: var(--fonte-secundaria);
+    font-size: 11.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0.2;
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+}
+.title .front-text{
+    position: absolute;
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate(-50%);
+    /* Top utilizado para colocar o  texto sob o back-text */
+    top: 74.125rem;
+    color: var(--cor-terciaria);
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+}
+/* Container pai dos cards */
+.card-why{
+    display: flex;
+    gap: 6.875rem;
+    margin: 1rem auto;
+    justify-content: center;
+    max-width: 1888px;
+}
+
+/* Utilizado apenas para centralizar os cards */
+.card-align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Representa cada card (cada div) */
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 34.75rem;
+    height: 51.9375rem;
+    background-color: var(--cor-terciaria);
+    border-radius: 15px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Tamanho dos Logos de cada Card */
+.card-why .infrastructure img{
+    width: 117px;
+    height: 140px;
+}
+.card-why .smart-class img{
+    width: 152px;
+    height: 140px;
+}
+.card-why .professional img{
+    width: 137px;
+    height: 140px;
+}
+
+/* Titulo de cada card */
+.card-why h2{
+    font-family: var(--fonte-principal);
+    font-size: 3.125rem;
+    font-weight: 400;
+    color: #F30404;
+    text-transform: uppercase;
+}
+/* Título do Profissional que quebra a linha em dois */
+.card-why .pro{
+    text-align: center;
+    line-height: 1;
+}
+
+/* Paragrafo dentro do Card */
+.card-why .card p{
+    font-size: 2.5rem;
+    line-height: 1.15;
+    text-align: justify;
+}
+
+/* Alinhando o texto dos dois primeiros card com o do terceiro */
+.card-why .card .space{
+    margin-top: 1.5rem;
+}
+
+/* Destacando trechos do texto no card */
+.card-why .card span{
+    font-weight: bold;
+}
