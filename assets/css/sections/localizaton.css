@@ -1,0 +1,81 @@
+
+/* Pai de Todos os dois elementos (Imagem e o Texto) */
+.localization{
+    display: flex;
+    width: 1888px;
+    margin: 1.164375rem auto;
+    gap: 10.0625rem;
+}
+
+/* Imagem da localização */
+.image-loc{
+    margin-left: 1rem;
+}
+.image-loc img{
+    width: 922px;
+    height: auto;
+}
+
+/* Pai do Texto e do Botão que devem estar um abaixo do outro */
+.text-buttom{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5625rem;
+}
+/* Responsável por ajeitar a altura dos textos */
+.text-buttom .text-loc{
+    gap: 2.5625rem;
+    margin-top: 5rem;
+}
+
+/* Titulo Localização */
+.text-buttom .text-loc h2{
+    font-family: var(--fonte-principal);
+    font-size: 3.375rem;
+    text-transform: uppercase;
+    text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto maior sobre a Localização */
+.text-buttom .text-loc h1{
+    font-size: 5.5rem;
+    color: #F30404;
+    width: 610px;
+    line-height: 1;
+    margin-bottom: 1.3125rem;
+    text-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto menor sobre a localização */
+.text-buttom .text-loc p{
+    font-size: 2.25rem;
+    color: var(--cor-terciaria);
+    width: 680px;
+    line-height: 1;
+}
+
+/* Botão que vai para a localização */
+.text-buttom .loc-button{
+    width: 28.375rem;
+    height: 7.0625rem;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    text-shadow: 3px 1px 4px rgba(0, 0, 0, 0.3);
+    align-content: center;
+    border: 3px solid #000000;
+    border-radius: 15px;
+}
+.text-buttom .loc-button:hover {
+    color: var(--cor-principal);
+    text-shadow: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+/* Texto do Botão */
+.text-buttom .loc-button h2{
+    font-size: 3.625rem;
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+    font-weight: 400;
+}
