@@ -1,9 +1,9 @@
-
 /* Fundo Branco para os cards */
-.back-list{
+.back-list {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
     background-color: var(--cor-terciaria);
     max-width: 1920px;
     height: 1060px;
@@ -11,7 +11,7 @@
 }
 
 /* Alinhamento dos cards e das arrows */
-.card-course-container{
+.card-course-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 /* Estrutura do card interno, sendo column e o space-between é fundamental para alinhamento */
-.card-course-container .card-course{
+.card-course-container .card-course {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,44 +30,50 @@
     border: 2px solid rgba(0, 0, 0, 0.5);
     box-shadow: 2px 4px 6.5px rgba(0, 0, 0, 0.5);
 }
+
 /* Tamanho Padrão para as imagens do curso */
-.card-course-container .card-course .foto-curso{
+.card-course-container .card-course .foto-curso {
     width: 434px;
     height: 595px;
 }
+
 /* Título do card do Curso */
-.card-course-container .card-course .title-card{
+.card-course-container .card-course .title-card {
     font-family: var(--fonte-principal);
     font-size: 2.275rem;
     line-height: 1;
     text-transform: uppercase;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
 /* Paragrafo do card, explicando o curso */
-.card-course-container .card-course p{
+.card-course-container .card-course p {
     font-family: var(--fonte-principal);
     font-size: 1.675rem;
     line-height: 1;
 }
+
 /* Estilizando a parte da carga horária */
-.card-course-container .card-course .carga-horaria{
+.card-course-container .card-course .carga-horaria {
     left: 20px;
     display: flex;
     gap: 0.9375rem;
     align-items: center;
 }
-.card-course-container .card-course .carga-horaria h3{
+
+.card-course-container .card-course .carga-horaria h3 {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
     padding-top: 0.3rem;
 }
-.card-course-container .card-course .carga-horaria span{
+
+.card-course-container .card-course .carga-horaria span {
     font-weight: bold;
 }
 
 /* Botão "Saiba Mais" */
-.card-course-container .card-course .button{
+.card-course-container .card-course .button {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
@@ -75,8 +81,75 @@
     padding-top: 0.3rem;
     text-align: center;
 }
-.card-course-container .card-course .button:hover{
+
+.card-course-container .card-course .button:hover {
     text-decoration: underline;
     color: var(--cor-secundaria);
     cursor: pointer;
+}
+
+/* Dimensão das setas laterais */
+.arrow-left,
+.arrow-right {
+    min-width: 3rem;
+}
+
+/* Quebras para a imagem não encolher e mudar de dimensão */
+
+@media (max-width: 1840px) {
+    .card-course-container .thirty {
+        display: none;
+    }
+
+    .card-course-container {
+        gap: 8rem;
+    }
+
+
+}
+
+@media (max-width: 1505px) {
+    .card-course-container {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1270px) {
+    .card-course-container .second {
+        display: none;
+    }
+
+    .card-course-container {
+        gap: 7rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .back-list {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-course-container {
+        flex-direction: column;
+        margin: 5rem auto;
+    }
+
+    .card-course-container .second {
+        display: flex;
+    }
+
+    .card-course-container .thirty {
+        display: flex;
+    }
+
+    .card-course-container .card-course:hover {
+        border: 5px solid var(--cor-secundaria);
+        opacity: 0.98;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
 }
