@@ -1,35 +1,36 @@
-
 /* Pai de Todos os dois elementos (Imagem e o Texto) */
-.localization{
+.localization {
     display: flex;
-    width: 1888px;
+    max-width: 1888px;
     margin: 1.164375rem auto;
     gap: 10.0625rem;
 }
 
 /* Imagem da localização */
-.image-loc{
+.image-loc {
     margin-left: 1rem;
 }
-.image-loc img{
+
+.image-loc img {
     width: 922px;
     height: auto;
 }
 
 /* Pai do Texto e do Botão que devem estar um abaixo do outro */
-.text-buttom{
+.text-buttom {
     display: flex;
     flex-direction: column;
     gap: 2.5625rem;
 }
+
 /* Responsável por ajeitar a altura dos textos */
-.text-buttom .text-loc{
+.text-buttom .text-loc {
     gap: 2.5625rem;
     margin-top: 5rem;
 }
 
 /* Titulo Localização */
-.text-buttom .text-loc h2{
+.text-buttom .text-loc h2 {
     font-family: var(--fonte-principal);
     font-size: 3.375rem;
     text-transform: uppercase;
@@ -37,7 +38,7 @@
 }
 
 /* Texto maior sobre a Localização */
-.text-buttom .text-loc h1{
+.text-buttom .text-loc h1 {
     font-size: 5.5rem;
     color: #F30404;
     width: 610px;
@@ -47,7 +48,7 @@
 }
 
 /* Texto menor sobre a localização */
-.text-buttom .text-loc p{
+.text-buttom .text-loc p {
     font-size: 2.25rem;
     color: var(--cor-terciaria);
     width: 680px;
@@ -55,7 +56,7 @@
 }
 
 /* Botão que vai para a localização */
-.text-buttom .loc-button{
+.text-buttom .loc-button {
     width: 28.375rem;
     height: 7.0625rem;
     background-color: var(--cor-terciaria);
@@ -66,16 +67,150 @@
     border: 3px solid #000000;
     border-radius: 15px;
 }
+
 .text-buttom .loc-button:hover {
     color: var(--cor-principal);
     text-shadow: none;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
+
 /* Texto do Botão */
-.text-buttom .loc-button h2{
+.text-buttom .loc-button h2 {
     font-size: 3.625rem;
     font-family: var(--fonte-principal);
     text-transform: uppercase;
     font-weight: 400;
+}
+
+@media (max-width:1770px) {
+    .image-loc img {
+        position: relative;
+        right: 7rem;
+        width: 522px;
+        height: auto;
+
+    }
+
+    .text-buttom {
+        position: relative;
+        left: 6rem;
+    }
+
+    .localization {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-buttom .text-loc h2 {
+        font-size: 2.375rem;
+    }
+
+    /* Texto maior sobre a Localização */
+    .text-buttom .text-loc h1 {
+        font-size: 4.5rem;
+    }
+
+    /* Texto menor sobre a localização */
+    .text-buttom .text-loc p {
+        font-size: 2.25rem;
+    }
+
+    .text-buttom .loc-button {
+        width: 24.375rem;
+        height: 7.0625rem;
+    }
+
+    .text-buttom .loc-button h2 {
+        font-size: 2.625rem;
+    }
+}
+
+@media (max-width:1550px) {
+    .image-loc img {
+        right: 0;
+        width: 522px;
+    }
+
+    .text-buttom {
+        left: 0;
+    }
+}
+
+/* Responsivo mobile tipo tab/desktop */
+@media (max-width:1375px) {
+    .image-loc img {
+        right: 3rem;
+        width: 522px;
+        height: auto;
+        margin-top: 5rem;
+
+    }
+
+    .text-buttom {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .localization {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    .text-buttom .text-loc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text-buttom .text-loc h2 {
+        font-size: 2.375rem;
+        text-align: center;
+        width: 280px;
+    }
+
+    /* Texto maior sobre a Localização */
+    .text-buttom .text-loc h1 {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    /* Texto menor sobre a localização */
+    .text-buttom .text-loc p {
+        font-size: 2rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .text-buttom .loc-button {
+        margin-top: 2rem;
+    }
+}
+
+/* Responsivo mobile tipo celular */
+@media (max-width:775px) {
+    .image-loc img {
+        right: 2.4rem;
+        width: 422px;
+    }
+
+    /* Texto maior sobre a Localização */
+    .text-buttom .text-loc h1 {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    /* Texto menor sobre a localização */
+    .text-buttom .text-loc p {
+        width: 480px;
+    }
+
+    .text-buttom .loc-button {
+        margin-top: 2rem;
+    }
 }

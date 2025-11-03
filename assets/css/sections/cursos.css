@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--cor-terciaria);
-    width: 1920px;
+    max-width: 1920px;
     height: 1060px;
     margin-top: 6rem;
 }
@@ -57,7 +57,6 @@
     align-items: center;
 }
 .card-course-container .card-course .carga-horaria h3{
-    position: ;
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
@@ -68,7 +67,7 @@
 }
 
 /* Botão "Saiba Mais" */
-.card-course-container .card-course .buttom{
+.card-course-container .card-course .button{
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
@@ -76,7 +75,7 @@
     padding-top: 0.3rem;
     text-align: center;
 }
-.card-course-container .card-course .buttom:hover{
+.card-course-container .card-course .button:hover{
     text-decoration: underline;
     color: var(--cor-secundaria);
     cursor: pointer;
