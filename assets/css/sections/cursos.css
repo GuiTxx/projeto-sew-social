@@ -1,1 +1,83 @@
-/* cursos.css — estilos da seção de cursos */
+
+/* Fundo Branco para os cards */
+.back-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-terciaria);
+    width: 1920px;
+    height: 1060px;
+    margin-top: 6rem;
+}
+
+/* Alinhamento dos cards e das arrows */
+.card-course-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.6875rem;
+}
+
+/* Estrutura do card interno, sendo column e o space-between é fundamental para alinhamento */
+.card-course-container .card-course{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30.0625rem;
+    height: 62.3125rem;
+    padding: 1rem 1rem;
+    gap: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 4px 6.5px rgba(0, 0, 0, 0.5);
+}
+/* Tamanho Padrão para as imagens do curso */
+.card-course-container .card-course .foto-curso{
+    width: 434px;
+    height: 595px;
+}
+/* Título do card do Curso */
+.card-course-container .card-course .title-card{
+    font-family: var(--fonte-principal);
+    font-size: 2.275rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Paragrafo do card, explicando o curso */
+.card-course-container .card-course p{
+    font-family: var(--fonte-principal);
+    font-size: 1.675rem;
+    line-height: 1;
+}
+/* Estilizando a parte da carga horária */
+.card-course-container .card-course .carga-horaria{
+    left: 20px;
+    display: flex;
+    gap: 0.9375rem;
+    align-items: center;
+}
+.card-course-container .card-course .carga-horaria h3{
+    position: ;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 0.3rem;
+}
+.card-course-container .card-course .carga-horaria span{
+    font-weight: bold;
+}
+
+/* Botão "Saiba Mais" */
+.card-course-container .card-course .buttom{
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+    text-align: center;
+}
+.card-course-container .card-course .buttom:hover{
+    text-decoration: underline;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
