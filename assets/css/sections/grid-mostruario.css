@@ -1,0 +1,127 @@
+.grid-images {
+    width: 100%;
+    max-width: 1888px;
+    margin: 1.164375rem auto;
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Configura o Título da Seção */
+.title-grid {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+.title-grid .back-text-grid {
+    font-family: var(--fonte-secundaria);
+    font-size: 11.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0.2;
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+}
+.title-grid .front-text-grid {
+    position: absolute;
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate(-50%);
+    /* Top utilizado para colocar o  texto sob o back-text */
+    top: 282rem;
+    color: var(--cor-terciaria);
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+}
+
+/* Disposição do Grid no Site */
+.grid-images-sew {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    grid-template-areas:
+        "top-L top-L mid top-R-mid full-R"
+        "low-L low-L-mid mid-all mid-all full-R";
+    gap: 1.87rem;
+    margin: 0 auto;
+    max-width: 1888px;
+    margin-bottom: 2rem;
+}
+
+/* Configuração das Imagens no Grid */
+.image {
+    border-radius: 2rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+}
+.image:hover {
+    transform: scale(1.02);
+}
+
+
+/* ELEMENTOS DO GRID */
+
+.movie {
+    grid-area: top-L;
+}
+.movie::before {
+    background-image: url(../../../images/banners/grid/movie-drive.jpg);
+}
+
+.messure {
+    grid-area: low-L-mid;
+}
+.messure::before {
+    background-image: url(../../../images/banners/grid/medicao-instrument.jpg);
+}
+
+.metrology {
+    grid-area: top-R-mid;
+}
+.metrology::before {
+    background-image: url(../../../images/banners/grid/metrologia.jpg);
+}
+
+.microscope {
+    grid-area: low-L;
+}
+.microscope::before {
+    background-image: url(../../../images/banners/grid/microscopic-eletronic.jpg);
+}
+
+.multimeter {
+    grid-area: full-R;
+}
+.multimeter::before {
+    background-image: url(../../../images/banners/grid/multimeter-second.png);
+}
+
+.people {
+    grid-area: mid;
+}
+.people::before {
+    background-image: url(../../../images/banners/grid/people.jpg);
+}
+
+.women {
+    grid-area: mid-all;
+}
+.women::before {
+    background-image: url(../../../images/banners/grid/women-explain.jpg);
+}
