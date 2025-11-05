@@ -1,1 +1,92 @@
-/* patrocinadores.css — estilos de patrocinadores */
+.partners {
+    width: 100%;
+    max-width: 1888px;
+    margin: 1.164375rem auto;
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Estilização Padrão do Título da seção */
+.title-partner {
+    position: relative; /* necessário para os absolutos internos */
+    text-align: center;
+    margin: 1rem auto 1rem;
+    padding: 4rem 0; /* cria espaço vertical sem usar valores absurdos em top */
+    min-height: clamp(8rem, 18vw, 20rem); /* garante espaço para o back-text */
+}
+.title-partner .back-text-partner,
+.title-partner .front-text-partner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.title-partner .back-text-partner {
+    font-family: var(--fonte-secundaria);
+    font-size: clamp(6rem, 11.25vw, 11.25rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0.2;
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 1;
+}
+.title-partner .front-text-partner {
+    font-family: var(--fonte-principal);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-terciaria);
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 2;
+}
+
+
+/* Parte do Flex container */
+
+.partners .flex-partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.8125rem 0.625rem;
+    border: 3px solid #D53F23;
+    border-radius: 15px;
+}
+
+.logo-partner{
+    width: 200px;
+    height: 200px;
+}
+
+.card-partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    border-radius: 15px;
+    width: 16.875rem;
+    height: 16.875rem;
+}
+
+/* Imagens dos patrocinados */
+
+.partners .card-partner .one{
+    background: url(../../../images/icons/patrocinados/prefeitura.svg) no-repeat center;
+}
+.partners .card-partner .two{
+    background: url(../../../images/icons/patrocinados/agua.svg) no-repeat center;
+}
+.partners .card-partner .three{
+    background: url(../../../images/icons/patrocinados/faici.svg) no-repeat center;
+}
+.partners .card-partner .four{
+    background: url(../../../images/icons/patrocinados/eco-friendly.svg) no-repeat center;
+}
+.partners .card-partner .five{
+    background: url(../../../images/icons/patrocinados/marca-x.svg) no-repeat center;
+}
+.partners .card-partner .six{
+    background: url(../../../images/icons/patrocinados/diamante.svg) no-repeat center;
+}
