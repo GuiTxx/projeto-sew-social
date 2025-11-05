@@ -69,6 +69,10 @@
     width: 16.875rem;
     height: 16.875rem;
 }
+.partners .flex-partner .card-partner:hover{
+    transform: scale(1.01);
+    transition: all ease 0.2s;
+}
 
 /* Imagens dos patrocinados */
 
