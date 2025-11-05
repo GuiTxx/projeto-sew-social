@@ -1,0 +1,121 @@
+.feedbacks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1888px;
+    margin: 1.164375rem auto;
+    padding: 0 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Estilização Padrão do Título da seção */
+.title-feedback {
+    position: relative;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    padding: 4rem 0;
+    min-height: clamp(8rem, 18vw, 20rem);
+}
+.title-feedback .back-text-feedback,
+.title-feedback .front-text-feedback {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.title-feedback .back-text-feedback {
+    font-family: var(--fonte-secundaria);
+    font-size: clamp(6rem, 11.25vw, 11.25rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0.2;
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 1;
+}
+.title-feedback .front-text-feedback {
+    font-family: var(--fonte-principal);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor-terciaria);
+    text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 2;
+}
+
+/* Estilização da Borda do flex */
+.feedbacks .feedback-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.875rem;
+    width: 100%;
+    border: 3px solid var(--cor-terciaria);
+    border-radius: 15px;
+    padding: 2.8125rem;
+    margin: 0 auto;
+}
+
+/* Estilização dos cards */
+.feedbacks .feedback-flex .card-feedback {
+    width: 23.4375rem;
+    height: 38.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px #D53F23;
+}
+.feedbacks .feedback-flex .card-feedback:hover {
+    transform: scale(1.02);
+    transition: all ease 0.3s;
+}
+
+
+/* Estilização da Foto do Feedback */
+.feedbacks .feedback-flex .card-feedback .photo {
+    width: 9.6875rem;
+    height: 9.6875rem;
+    border-radius: 80px;
+    border: 3px solid #000000;
+    margin-top: 1.5rem;
+}
+
+/* Fotos */
+.feedbacks .feedback-flex .card-feedback .first-person {
+    background: url(../../../images/icons/feedback/mulher-braco-cruzado.jpg) no-repeat center;
+}
+.feedbacks .feedback-flex .card-feedback .second-person {
+    background: url(../../../images/icons/feedback/papai.jpg) no-repeat center;
+}
+.feedbacks .feedback-flex .card-feedback .thirty-person {
+    background: url(../../../images/icons/feedback/mulher-de-lado.jpg) no-repeat center;
+}
+.feedbacks .feedback-flex .card-feedback .fourthy-person {
+    background: url(../../../images/icons/feedback/homem-sorrindo.jpg) no-repeat center;
+}
+
+/* Configuração das Estrelas */
+.feedbacks .feedback-flex .card-feedback .star {
+    background: url(../../../images/icons/feedback/estrela.svg);
+    width: 16.8875rem;
+    height: 3.0375rem;
+    margin-top: 1rem;
+}
+/* Configuração do Texto */
+.feedbacks .feedback-flex .card-feedback p {
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    width: 15.0625rem;
+    margin-top: 1.9375rem;
+}
+/* Configuração da Aspas */
+.feedbacks .feedback-flex .card-feedback p  span {
+    font-weight: 700;
+    font-family: var(--fonte-principal);
+}
