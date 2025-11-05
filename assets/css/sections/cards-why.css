@@ -10,32 +10,43 @@
 
 /* Estilização do Título da Seção */
 .title {
+    position: relative;
+    /* necessário para os absolutos internos */
     text-align: center;
+    margin: 1rem auto 1rem;
+    padding: 4rem 0;
+    /* cria espaço vertical sem usar valores absurdos em top */
+    min-height: clamp(8rem, 18vw, 20rem);
+    /* garante espaço para o back-text */
 }
-
+.title .back-text,
+.title .front-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
 .title .back-text {
     font-family: var(--fonte-secundaria);
-    font-size: 11.25rem;
+    font-size: clamp(6rem, 11.25vw, 11.25rem);
     font-weight: 400;
     text-transform: uppercase;
     color: var(--cor-secundaria);
     opacity: 0.2;
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 1;
 }
-
 .title .front-text {
-    position: absolute;
     font-family: var(--fonte-principal);
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 400;
     text-transform: uppercase;
-    left: 50%;
-    transform: translate(-50%);
-    /* Top utilizado para colocar o  texto sob o back-text */
-    top: 74.125rem;
     color: var(--cor-terciaria);
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 2;
 }
+
 
 /* Container pai dos cards */
 .card-why {
@@ -142,11 +153,6 @@
         margin-top: 1.5rem;
     }
 
-    .title .front-text {
-        width: 850px;
-        font-size: 3.8rem;
-    }
-
 
 }
 
@@ -162,34 +168,11 @@
     }
 }
 
-/* Responsivo desktop menor */
-@media (max-width: 1170px) {
-    .title .back-text {
-        font-size: 9.25rem;
-    }
-
-    .title .front-text {
-        font-size: 3.2rem;
-        /* Top utilizado para colocar o  texto sob o back-text */
-        top: 73.125rem;
-    }
-}
-
 /* Responsivo tablet */
 @media (max-width: 960px) {
     .card {
         width: 30rem;
         height: 43rem;
-    }
-
-    .title .back-text {
-        font-size: 7.25rem;
-    }
-
-    .title .front-text {
-        font-size: 2.6rem;
-        /* Top utilizado para colocar o  texto sob o back-text */
-        top: 72.125rem;
     }
 
     .card-why .card p {
@@ -206,11 +189,5 @@
 @media (max-width: 735px) {
     .title .back-text {
         font-size: 5.25rem;
-    }
-
-    .title .front-text {
-        font-size: 1.8rem;
-        /* Top utilizado para colocar o  texto sob o back-text */
-        top: 71.525rem;
     }
 }
