@@ -8,12 +8,16 @@
 
 /* Estilização Padrão do Título da seção */
 .title-partner {
-    position: relative; /* necessário para os absolutos internos */
+    position: relative;
+    /* necessário para os absolutos internos */
     text-align: center;
     margin: 1rem auto 1rem;
-    padding: 4rem 0; /* cria espaço vertical sem usar valores absurdos em top */
-    min-height: clamp(8rem, 18vw, 20rem); /* garante espaço para o back-text */
+    padding: 4rem 0;
+    /* cria espaço vertical sem usar valores absurdos em top */
+    min-height: clamp(8rem, 18vw, 20rem);
+    /* garante espaço para o back-text */
 }
+
 .title-partner .back-text-partner,
 .title-partner .front-text-partner {
     position: absolute;
@@ -22,6 +26,7 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+
 .title-partner .back-text-partner {
     font-family: var(--fonte-secundaria);
     font-size: clamp(6rem, 11.25vw, 11.25rem);
@@ -32,6 +37,7 @@
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
     z-index: 1;
 }
+
 .title-partner .front-text-partner {
     font-family: var(--fonte-principal);
     font-size: clamp(2rem, 4vw, 4rem);
@@ -45,7 +51,7 @@
 
 /* Parte do Flex container */
 
-.partners .flex-partner{
+.partners .flex-partner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,12 +61,12 @@
     border-radius: 15px;
 }
 
-.logo-partner{
+.logo-partner {
     width: 200px;
     height: 200px;
 }
 
-.card-partner{
+.card-partner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,28 +75,48 @@
     width: 16.875rem;
     height: 16.875rem;
 }
-.partners .flex-partner .card-partner:hover{
+
+.partners .flex-partner .card-partner:hover {
     transform: scale(1.01);
     transition: all ease 0.2s;
 }
 
 /* Imagens dos patrocinados */
 
-.partners .card-partner .one{
+.partners .card-partner .one {
     background: url(../../../images/icons/patrocinados/prefeitura.svg) no-repeat center;
 }
-.partners .card-partner .two{
+
+.partners .card-partner .two {
     background: url(../../../images/icons/patrocinados/agua.svg) no-repeat center;
 }
-.partners .card-partner .three{
+
+.partners .card-partner .three {
     background: url(../../../images/icons/patrocinados/faici.svg) no-repeat center;
 }
-.partners .card-partner .four{
+
+.partners .card-partner .four {
     background: url(../../../images/icons/patrocinados/eco-friendly.svg) no-repeat center;
 }
-.partners .card-partner .five{
+
+.partners .card-partner .five {
     background: url(../../../images/icons/patrocinados/marca-x.svg) no-repeat center;
 }
-.partners .card-partner .six{
+
+.partners .card-partner .six {
     background: url(../../../images/icons/patrocinados/diamante.svg) no-repeat center;
+}
+
+/* Parte Responsiva */
+@media (max-width: 1460px) {
+    .partners .flex-partner {
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .partners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
