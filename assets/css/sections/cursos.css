@@ -31,6 +31,12 @@
     box-shadow: 2px 4px 6.5px rgba(0, 0, 0, 0.5);
 }
 
+.card-course-container .card-course:hover {
+    border: 3px solid var(--cor-secundaria);
+    opacity: 0.98;
+    transition: all ease 0.2s;
+}
+
 /* Tamanho Padrão para as imagens do curso */
 .card-course-container .card-course .foto-curso {
     width: 434px;

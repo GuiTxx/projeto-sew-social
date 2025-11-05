@@ -16,6 +16,7 @@
     padding: 4rem 0;
     min-height: clamp(8rem, 18vw, 20rem);
 }
+
 .title-feedback .back-text-feedback,
 .title-feedback .front-text-feedback {
     position: absolute;
@@ -24,6 +25,7 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+
 .title-feedback .back-text-feedback {
     font-family: var(--fonte-secundaria);
     font-size: clamp(6rem, 11.25vw, 11.25rem);
@@ -34,6 +36,7 @@
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
     z-index: 1;
 }
+
 .title-feedback .front-text-feedback {
     font-family: var(--fonte-principal);
     font-size: clamp(2rem, 4vw, 4rem);
@@ -69,6 +72,7 @@
     border-radius: 15px;
     box-shadow: 0px 4px 10px #D53F23;
 }
+
 .feedbacks .feedback-flex .card-feedback:hover {
     transform: scale(1.02);
     transition: all ease 0.3s;
@@ -89,12 +93,15 @@
 .feedbacks .feedback-flex .card-feedback .first-person {
     background: url(../../../images/icons/feedback/mulher-braco-cruzado.jpg) no-repeat center;
 }
+
 .feedbacks .feedback-flex .card-feedback .second-person {
     background: url(../../../images/icons/feedback/papai.jpg) no-repeat center;
 }
+
 .feedbacks .feedback-flex .card-feedback .thirty-person {
     background: url(../../../images/icons/feedback/mulher-de-lado.jpg) no-repeat center;
 }
+
 .feedbacks .feedback-flex .card-feedback .fourthy-person {
     background: url(../../../images/icons/feedback/homem-sorrindo.jpg) no-repeat center;
 }
@@ -106,6 +113,7 @@
     height: 3.0375rem;
     margin-top: 1rem;
 }
+
 /* Configuração do Texto */
 .feedbacks .feedback-flex .card-feedback p {
     font-family: var(--fonte-principal);
@@ -115,8 +123,18 @@
     width: 15.0625rem;
     margin-top: 1.9375rem;
 }
+
 /* Configuração da Aspas */
-.feedbacks .feedback-flex .card-feedback p  span {
+.feedbacks .feedback-flex .card-feedback p span {
     font-weight: 700;
     font-family: var(--fonte-principal);
+}
+
+/* Responsivo */
+@media (max-width: 1390px) {
+    .feedbacks .feedback-flex {
+        flex-direction: column;
+        max-width: 450px;
+        gap: 6rem;
+    }
 }
