@@ -6,33 +6,48 @@
     padding-bottom: 4rem;
 }
 
-/* Configura o Título da Seção */
+/* Configura o Título da Seção (ajustado para sobreposição centralizada)
+   - o container é positioned (relative)
+   - os textos são posicionados absolutamente e centrados com transform
+   - usa clamp() para tamanhos responsivos
+*/
 .title-grid {
+    position: relative; /* necessário para os absolutos internos */
     text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin: 4rem auto 1rem;
+    padding: 4rem 0; /* cria espaço vertical sem usar valores absurdos em top */
+    min-height: clamp(8rem, 18vw, 20rem); /* garante espaço para o back-text */
 }
+
+.title-grid .back-text-grid,
+.title-grid .front-text-grid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* evita capturar cliques */
+    white-space: nowrap;
+}
+
 .title-grid .back-text-grid {
     font-family: var(--fonte-secundaria);
-    font-size: 11.25rem;
+    font-size: clamp(6rem, 11.25vw, 11.25rem);
     font-weight: 400;
     text-transform: uppercase;
     color: var(--cor-secundaria);
     opacity: 0.2;
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 1;
 }
+
 .title-grid .front-text-grid {
-    position: absolute;
     font-family: var(--fonte-principal);
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 400;
     text-transform: uppercase;
-    left: 50%;
-    transform: translate(-50%);
-    /* Top utilizado para colocar o  texto sob o back-text */
-    top: 282rem;
     color: var(--cor-terciaria);
     text-shadow: 3px 1px 26px rgba(0, 0, 0, 0.76);
+    z-index: 2;
 }
 
 /* Disposição do Grid no Site */
@@ -58,6 +73,7 @@
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+
 .image::before {
     content: '';
     position: absolute;
@@ -70,6 +86,7 @@
     background-repeat: no-repeat;
     border-radius: inherit;
 }
+
 .image:hover {
     transform: scale(1.02);
 }
@@ -80,6 +97,7 @@
 .movie {
     grid-area: top-L;
 }
+
 .movie::before {
     background-image: url(../../../images/banners/grid/movie-drive.jpg);
 }
@@ -87,6 +105,7 @@
 .messure {
     grid-area: low-L-mid;
 }
+
 .messure::before {
     background-image: url(../../../images/banners/grid/medicao-instrument.jpg);
 }
@@ -94,6 +113,7 @@
 .metrology {
     grid-area: top-R-mid;
 }
+
 .metrology::before {
     background-image: url(../../../images/banners/grid/metrologia.jpg);
 }
@@ -101,6 +121,7 @@
 .microscope {
     grid-area: low-L;
 }
+
 .microscope::before {
     background-image: url(../../../images/banners/grid/microscopic-eletronic.jpg);
 }
@@ -108,6 +129,7 @@
 .multimeter {
     grid-area: full-R;
 }
+
 .multimeter::before {
     background-image: url(../../../images/banners/grid/multimeter-second.png);
 }
@@ -115,6 +137,7 @@
 .people {
     grid-area: mid;
 }
+
 .people::before {
     background-image: url(../../../images/banners/grid/people.jpg);
 }
@@ -122,6 +145,66 @@
 .women {
     grid-area: mid-all;
 }
+
 .women::before {
     background-image: url(../../../images/banners/grid/women-explain.jpg);
+}
+
+/* Parte Responsiva */
+@media (max-width: 1800px) {
+    .grid-images-sew {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 400px);
+        grid-template-areas:
+            "top-L top-L mid top-R-mid"
+            "low-L low-L-mid mid-all mid-all"
+            "full-R full-R full-R full-R";
+    }
+
+    /* não é necessário ajustar 'top' aqui — o título usa centralização por transform */
+
+    .multimeter::before {
+        background-image: url(../../../images/banners/grid/multimeter-responsive.jpg);
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .grid-images {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .grid-images-sew {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        grid-template-areas:
+            "top-L top-L mid top-R-mid"
+            "low-L low-L-mid mid-all mid-all"
+            "full-R full-R full-R full-R";
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 930px) {
+    .grid-images {
+        padding: 0 1rem;
+    }
+
+    .grid-images-sew {
+        grid-template-columns: 1fr 1fr;  /* simplifica para 2 colunas */
+        gap: 1rem;
+        grid-template-areas:
+            "top-L  mid"
+            "low-L mid-all"
+            "full-R full-R";
+        max-width: 600px;  /* ajustado para 2 colunas */
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .image {
+        margin-bottom: 0;  /* remove margem extra se houver */
+    }
 }

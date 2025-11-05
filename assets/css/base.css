@@ -1,3 +1,4 @@
 body{
     background-color: var(--cor-principal);
+    overflow-x: hidden;
 }
