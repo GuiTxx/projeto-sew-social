@@ -77,8 +77,8 @@
 }
 
 .partners .flex-partner .card-partner:hover {
-    transform: scale(1.01);
-    transition: all ease 0.2s;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+    transition: all ease 0.5s;
 }
 
 /* Imagens dos patrocinados */
