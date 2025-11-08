@@ -1,1 +1,207 @@
-/* footer.css — estilos do rodapé */
+/* Parte principal do  footer */
+.footer-main {
+    display: flex;
+    background-color: var(--cor-terciaria);
+    justify-content: center;
+}
+
+/* Logo da SEW Everywhere */
+.footer-main .logo-redes .logo-footer img {
+    width: 215px;
+    height: 210px;
+}
+
+/* Pai da Logo e das Redes-Sociais */
+.footer-main .logo-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+/* Apenas as Redes Sociais */
+.footer-redes {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* Logos das redes sociais */
+.footer-main .logo-redes .footer-redes .rede-social {
+    width: 75px;
+    height: 75px;
+}
+
+.footer-main .logo-redes .footer-redes .rede-social a:hover {
+    opacity: 0.8;
+}
+
+
+/* Parte Geral onde temos os links das partes: Menu, Cursos e Atendimento */
+.footer-details {
+    display: flex;
+    gap: 5rem;
+    margin-left: 17rem;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    background-color: aqua;
+}
+
+.footer-details h2 {
+    font-family: var(--fonte-principal);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #000000;
+
+}
+
+.footer-details p {
+    font-family: var(--fonte-principal);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.footer-main a:hover {
+    text-decoration: underline;
+    color: var(--cor-secundaria);
+}
+
+.footer-details #arrow {
+    margin-bottom: 0.3rem;
+}
+
+.connection-menu {
+    display: flex;
+    gap: 5rem;
+}
+
+/* Ícone do Wats */
+.footer-details .footer-atendimento .footer-itens .atend {
+    background: url(../../../images/icons/footer-icons/wats-footer-jpg.jpg) no-repeat center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+
+.footer-details .footer-atendimento .footer-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+}
+
+/* Ícones de email e horário */
+.footer-details .footer-atendimento .atend,
+#horario,
+#email {
+    margin-bottom: 0.35rem;
+}
+
+
+/* Tópicos de cada sessão, como por exemplo a de cursos, com as flechas e o tópico */
+.topic {
+    display: flex;
+    align-items: center;
+}
+
+/* Parte Copyright */
+.footer-copyright {
+    display: flex;
+    background-color: var(--cor-secundaria);
+}
+
+.footer-copyright .copy #copyright {
+    margin-bottom: 0.32rem;
+}
+
+/* Div feita apenas para conseguir alinhar e aplicar margem no  footer copyright */
+.margin-footer {
+    display: flex;
+    position: relative;
+    margin: 1.25rem 1.8rem;
+    gap: 15rem;
+    width: 100%;
+}
+
+.margin-footer p,
+a {
+    font-family: var(--fonte-principal);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+/* Parte onde temos a politica de privacidade, termos de uso e etc */
+.footer-copyright .termos-footer {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    gap: 1.4rem;
+    flex-direction: row-reverse;
+}
+
+.footer-copyright .termos-footer a:hover {
+    text-decoration: underline;
+    color: var(--cor-terciaria);
+}
+
+/* Parte Responsiva da sessão Footer */
+
+@media (max-width: 1590px) {
+    .footer-details {
+        flex-direction: column;
+    }
+
+    .footer-main {
+        align-items: center;
+    }
+
+    .margin-footer p,
+    a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1210px) {
+    .footer-details {
+        margin-left: 6rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .margin-footer {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer-copyright .termos-footer {
+        position: static;
+    }
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-details {
+        margin-left: 0;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .connection-menu{
+        flex-direction: column;
+    }
+}
