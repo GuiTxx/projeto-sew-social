@@ -2,7 +2,7 @@
     max-width: 1888px;
     height: 1068px;
     position: relative;
-    background: url(/images/banners/hero.png) no-repeat center;
+    background: url(../../../images/banners/hero.png) no-repeat center;
     background-size: cover;
     margin: 1.164375rem auto;
     border-radius: 15px;
@@ -104,7 +104,7 @@
 /* Responsivo desktop grande */
 @media (max-width: 1890px) {
     .hero {
-        background: url(/images/banners/hero-responsivo.png) no-repeat center;
+        background: url(../../../images/banners/hero-responsivo.png) no-repeat center;
     }
     .hero-align {
         width: 100%;
@@ -129,7 +129,7 @@
 /* Responsivo desktop menor */
 @media (max-width: 1305px) {
     .hero {
-        background: url(/images/banners/hero-mobile.png) no-repeat center;
+        background: url(../../../images/banners/hero-mobile.png) no-repeat center;
     }
     .hero-align {
         width: 100%;
@@ -156,7 +156,7 @@
 /* Responsivo tablet */
 @media (max-width: 920px) {
     .hero {
-        background: url(/images/banners/hero-mobile-menor.png) no-repeat center;
+        background: url(../../../images/banners/hero-mobile-menor.png) no-repeat center;
     }
     .hero-align {
         width: 100%;
@@ -184,7 +184,7 @@
 @media (max-width: 670px) {
 
     .hero {
-        background: url(/images/banners/hero-mobile-menor-2x.png) no-repeat center;
+        background: url(../../../images/banners/hero-mobile-menor-2x.png) no-repeat center;
     }
     .hero-align {
         width: 100%;
