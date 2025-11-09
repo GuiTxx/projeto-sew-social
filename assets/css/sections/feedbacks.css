@@ -108,9 +108,9 @@
 
 /* Configuração das Estrelas */
 .feedbacks .feedback-flex .card-feedback .star {
-    background: url(../../../images/icons/feedback/estrela.svg);
-    width: 16.8875rem;
-    height: 3.0375rem;
+    background: url(../../../images/icons/feedback/star.svg);
+    width: 14.6875rem;
+    height: 2.8375rem;
     margin-top: 1rem;
 }
 
